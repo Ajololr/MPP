@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tracer", "Tracer\Tracer.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App", "App\App.csproj", "{1CB9706F-67A8-4B22-8379-52856C6A35A2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{3AAB437F-BFA6-453D-8CB6-048932430106}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{1CB9706F-67A8-4B22-8379-52856C6A35A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CB9706F-67A8-4B22-8379-52856C6A35A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CB9706F-67A8-4B22-8379-52856C6A35A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AAB437F-BFA6-453D-8CB6-048932430106}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AAB437F-BFA6-453D-8CB6-048932430106}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AAB437F-BFA6-453D-8CB6-048932430106}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AAB437F-BFA6-453D-8CB6-048932430106}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

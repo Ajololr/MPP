@@ -7,7 +7,8 @@ namespace Tracer
 {
     public class XmlSerializer : ISerializer<TraceResult>
     {
-        XDocument xdoc = new XDocument();
+        private const string FILE_PATH = "XML output.txt";
+        private readonly XDocument xdoc = new XDocument();
 
         public string stringify(TraceResult traceResult)
         {
@@ -21,7 +22,7 @@ namespace Tracer
                 XAttribute threadTimeMs = new XAttribute("timeMs", threadInfo.ElapsedMs);
                 thread.Add(threadId, threadTimeMs);
                 
-                addMethods(thread, threadInfo.Methods);
+                AddMethods(thread, threadInfo.Methods);
                 
                 root.Add(thread);
             }
@@ -31,7 +32,7 @@ namespace Tracer
             return xdoc.ToString();
         }
         
-        private static void addMethods(XElement element, LinkedList<MethodInfo> list)
+        private static void AddMethods(XElement element, LinkedList<MethodInfo> list)
         {
             foreach (MethodInfo methodInfo in list)
             {
@@ -43,7 +44,7 @@ namespace Tracer
                 
                 method.Add(methodName, methodClass, methodTimeMs);
                 
-                addMethods(method, methodInfo.Methods);
+                AddMethods(method, methodInfo.Methods);
                 
                 element.Add(method);
             }
@@ -51,10 +52,8 @@ namespace Tracer
 
         public void saveToFile()
         {
-            using ( FileStream fileStream = File.Create("XML output.txt"))
-            {
-                xdoc.Save(fileStream);
-            }
+            using FileStream fileStream = File.Create(FILE_PATH);
+            xdoc.Save(fileStream);
         }
 
         public void writeToConsole()

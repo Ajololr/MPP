@@ -6,13 +6,9 @@ namespace Tracer
 {
     public class JsonSerializer : ISerializer<TraceResult>
     {
+        private const string FILE_PATH = "Json output.txt";
         private string _json;
-
-        public string Json
-        {
-            get => _json;
-            set => _json = value;
-        }
+        public string Json => _json;
 
         public string stringify(TraceResult obj)
         {
@@ -22,7 +18,7 @@ namespace Tracer
 
         public void saveToFile()
         {
-            using ( FileStream fileStream = File.Create("Json output.txt"))
+            using ( FileStream fileStream = File.Create(FILE_PATH))
             {
                 byte[] array = System.Text.Encoding.Default.GetBytes(_json);
                 fileStream.Write(array);

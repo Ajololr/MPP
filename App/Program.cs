@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading;
-using System.Xml.Serialization;
-using Newtonsoft.Json;
+﻿using System.Threading;
 using Tracer;
-using XmlSerializer = Tracer.XmlSerializer;
 
 namespace App
 {
@@ -19,18 +14,23 @@ namespace App
             foo.AnotherMethod();
             
             Other other = new Other(tracerImpl);
-            Thread InstanceCaller = new Thread(
+            Thread instanceCaller = new Thread(
                 new ThreadStart(other.OtherMethod));
-            InstanceCaller.Start();
+            instanceCaller.Start();
             
             Bar bar = new Bar(tracerImpl);
             bar.InnerMethod();
 
-            InstanceCaller.Join();
+            instanceCaller.Join();
                 
             TraceResult traceResult = tracerImpl.GetTraceResult();
             
-            ISerializer<TraceResult> serializer = new XmlSerializer();
+            ISerializer<TraceResult> serializer = new JsonSerializer();
+            serializer.stringify(traceResult);
+            serializer.writeToConsole();
+            serializer.saveToFile();
+            
+            serializer = new XmlSerializer();
             serializer.stringify(traceResult);
             serializer.writeToConsole();
             serializer.saveToFile();
@@ -42,7 +42,7 @@ namespace App
         private Bar _bar;
         private ITracer _tracer;
 
-        internal Foo(ITracer tracer)
+        public Foo(ITracer tracer)
         {
             _tracer = tracer;
             _bar = new Bar(_tracer);
@@ -72,7 +72,7 @@ namespace App
     {
         private ITracer _tracer;
 
-        internal Bar(ITracer tracer)
+        public Bar(ITracer tracer)
         {
             _tracer = tracer;
         }
@@ -94,7 +94,7 @@ namespace App
     {
         private ITracer _tracer;
 
-        internal Other(ITracer tracer)
+        public Other(ITracer tracer)
         {
             _tracer = tracer;
         }
@@ -103,7 +103,7 @@ namespace App
         {
             _tracer.StartTrace();
 
-            Thread.Sleep(20);
+            Thread.Sleep(100);
             
             _tracer.StopTrace();
         }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Reflection;
@@ -10,10 +11,9 @@ namespace Tracer
     
     public class TracerImpl : ITracer
     {
-        public TraceResult Result = new TraceResult();
-        private Dictionary<int, Stack<MethodInfo>> _methodsListMap = new Dictionary<int, Stack<MethodInfo>>();
-        private Stack<Stopwatch> _watch = new Stack<Stopwatch>();
-        
+        public readonly TraceResult Result = new TraceResult();
+        private ConcurrentDictionary<int, ConcurrentStack<MethodInfo>> _methodsListMap = new ConcurrentDictionary<int, ConcurrentStack<MethodInfo>>();
+        private ConcurrentStack<Stopwatch> _watch = new ConcurrentStack<Stopwatch>();
         public void StartTrace()
         {
             string className = "";
@@ -31,13 +31,17 @@ namespace Tracer
             {
                 node = Result.Threads.AddLast(threadInfo);
                 node.Value.Methods.AddLast(methodInfo);
-                _methodsListMap[threadId] = new Stack<MethodInfo>();
+                _methodsListMap[threadId] = new ConcurrentStack<MethodInfo>();
             }
             else
             {
                 if (_methodsListMap[threadId].Count != 0)
                 {
-                    _methodsListMap[threadId].Peek().Methods.AddLast(methodInfo);
+                    MethodInfo mf;
+                    if (_methodsListMap[threadId].TryPeek(out mf))
+                    {
+                        mf.Methods.AddLast(methodInfo);
+                    }
                 }
                 else
                 {
@@ -51,12 +55,19 @@ namespace Tracer
 
         public void StopTrace()
         {
-            _watch.Peek().Stop();
-            Stopwatch stopwatch = _watch.Pop();
+            Stopwatch stopwatch;
+            if (_watch.TryPop(out stopwatch))
+            {
+                stopwatch.Stop();
+            }
             long elapsedMs = stopwatch.ElapsedMilliseconds;
 
             int threadId = GetThreadId();
-            _methodsListMap[threadId].Pop().ElapsedMs = elapsedMs;
+            MethodInfo mf;
+            if (_methodsListMap[threadId].TryPop(out mf))
+            {
+                mf.ElapsedMs = elapsedMs;
+            }
             
             ThreadInfo threadInfo = new ThreadInfo(threadId);
             LinkedListNode<ThreadInfo> node = Result.Threads.Find(threadInfo);
