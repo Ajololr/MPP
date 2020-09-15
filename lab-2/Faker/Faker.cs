@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Dynamic;
 using System.Linq;
 using System.Reflection;
-using System.Reflection.Emit;
 
-namespace Faker
+namespace ClassLibrary1
 {
     public class Faker
     {
@@ -17,8 +15,9 @@ namespace Faker
             { typeof(double), () => GenerateDouble() },
             { typeof(DateTime), () => GenerateDateTime() },
         };
+        private HashSet<Type> _usedClasses = new HashSet<Type>();
         private static Random random = new Random();
-        
+
         public T Create<T>() where T : class
         {
             Type type = typeof(T);
@@ -27,6 +26,9 @@ namespace Faker
 
         private Object CreateInner(Type type)
         {
+            if (_usedClasses.Contains(type)) throw new Exception("Recursive DTO");
+            
+            _usedClasses.Add(type);
             ConstructorInfo constructor = selectConstructor(type);
 
             Object[] param = GenerateParams(constructor);
@@ -35,7 +37,27 @@ namespace Faker
 
             foreach (FieldInfo info in type.GetFields())
             {
-                Type propertyType = info.FieldType;
+                Type fieldType = info.FieldType;
+                
+                if (!@switch.ContainsKey(fieldType))
+                {
+                    if (fieldType.IsClass)
+                    {
+                        info.SetValue(obj, CreateInner(fieldType));
+                    }
+                }
+                else
+                {
+                    info.SetValue(obj, @switch[fieldType]());
+                }
+            }
+
+            foreach (PropertyInfo info in type.GetProperties())
+            {
+                if (!info.CanWrite) continue;
+                
+                Type propertyType = info.PropertyType;
+                
                 if (!@switch.ContainsKey(propertyType))
                 {
                     if (propertyType.IsClass)
@@ -45,13 +67,8 @@ namespace Faker
                 }
                 else
                 {
-                    info.SetValue(obj, @switch[info.FieldType]());
+                    info.SetValue(obj, @switch[info.PropertyType]());
                 }
-            }
-
-            foreach (PropertyInfo info in type.GetProperties())
-            {
-                if (info.CanWrite) info.SetValue(obj,@switch[info.PropertyType]());
             }
             
             return obj;
@@ -77,12 +94,23 @@ namespace Faker
 
         private Object[] GenerateParams(ConstructorInfo constructor)
         {
-            LinkedList<Object> result = new LinkedList<object>();
+            var result = new LinkedList<object>();
             
             foreach (ParameterInfo info in constructor.GetParameters())
             {
-                Type type = info.ParameterType;
-                result.AddLast(@switch[type]());
+                Type parameterType = info.ParameterType;
+                
+                if (!@switch.ContainsKey(parameterType))
+                {
+                    if (parameterType.IsClass)
+                    {
+                        result.AddLast(CreateInner(parameterType));
+                    }
+                }
+                else
+                {
+                    result.AddLast(@switch[parameterType]());
+                }
             }
 
             return result.ToArray();

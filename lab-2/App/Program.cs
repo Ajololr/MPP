@@ -1,5 +1,5 @@
 ﻿using System;
-using Faker;
+using ClassLibrary1;
 
 namespace App
 {
@@ -7,7 +7,7 @@ namespace App
     {
         static void Main(string[] args)
         {
-            Faker.Faker faker = new Faker.Faker();
+            Faker faker = new Faker();
             Foo foo = faker.Create<Foo>();
             Console.WriteLine(foo);
         }
@@ -57,5 +57,16 @@ namespace App
     {
         public int IntValue;
         public string StringValue;
+        private Other _other;
+        public Bar(int intValue, Other other)
+        {
+            IntValue = intValue;
+            _other = other;
+        }
+    }
+
+    class Other
+    {
+        public DateTime DateTime;
     }
 }
