@@ -22,16 +22,31 @@ namespace Faker
         public T Create<T>() where T : class
         {
             Type type = typeof(T);
+            return (T)CreateInner(type);
+        }
 
+        private Object CreateInner(Type type)
+        {
             ConstructorInfo constructor = selectConstructor(type);
 
             Object[] param = GenerateParams(constructor);
 
-            T obj = (T) constructor.Invoke(param);
+            Object obj = constructor.Invoke(param);
 
             foreach (FieldInfo info in type.GetFields())
             {
-                info.SetValue(obj, @switch[info.FieldType]());
+                Type propertyType = info.FieldType;
+                if (!@switch.ContainsKey(propertyType))
+                {
+                    if (propertyType.IsClass)
+                    {
+                        info.SetValue(obj, CreateInner(propertyType));
+                    }
+                }
+                else
+                {
+                    info.SetValue(obj, @switch[info.FieldType]());
+                }
             }
 
             foreach (PropertyInfo info in type.GetProperties())

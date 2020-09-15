@@ -20,11 +20,7 @@ namespace App
         public string StingValue;
         private long _longValue;
         private double _doubleValue;
-
-        public Foo()
-        {
-            
-        }
+        public Bar bar;
 
         public Foo(int integerValue, float floatValue)
         {
@@ -55,5 +51,11 @@ namespace App
             get => _doubleValue;
             set => _doubleValue = value;
         }
+    }
+
+    class Bar
+    {
+        public int IntValue;
+        public string StringValue;
     }
 }
