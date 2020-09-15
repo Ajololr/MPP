@@ -12,7 +12,7 @@ namespace Tracer
     public class TracerImpl : ITracer
     {
         public readonly TraceResult Result = new TraceResult();
-        private ConcurrentDictionary<int, ConcurrentStack<MethodInfo>> _methodsListMap = new ConcurrentDictionary<int, ConcurrentStack<MethodInfo>>();
+        private ConcurrentDictionary<int, Stack<MethodInfo>> _methodsListMap = new ConcurrentDictionary<int, Stack<MethodInfo>>();
         private ConcurrentStack<Stopwatch> _watch = new ConcurrentStack<Stopwatch>();
         public void StartTrace()
         {
@@ -31,7 +31,7 @@ namespace Tracer
             {
                 node = Result.Threads.AddLast(threadInfo);
                 node.Value.Methods.AddLast(methodInfo);
-                _methodsListMap[threadId] = new ConcurrentStack<MethodInfo>();
+                _methodsListMap[threadId] = new Stack<MethodInfo>();
             }
             else
             {

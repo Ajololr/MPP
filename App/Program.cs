@@ -19,9 +19,13 @@ namespace App
             instanceCaller.Start();
             
             Bar bar = new Bar(tracerImpl);
-            bar.InnerMethod();
+            
+            Thread instanceCaller1 = new Thread(
+                new ThreadStart(bar.InnerMethod));
+            instanceCaller1.Start();
 
             instanceCaller.Join();
+            instanceCaller1.Join();
                 
             TraceResult traceResult = tracerImpl.GetTraceResult();
             
