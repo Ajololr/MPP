@@ -75,10 +75,7 @@ namespace App
     class Other
     {
         public DateTime DateTime;
+        public Bar Bar;
 
-        public Other()
-        {
-            
-        }
     }
 }

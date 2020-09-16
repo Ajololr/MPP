@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO.IsolatedStorage;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 
@@ -8,22 +8,28 @@ namespace ClassLibrary1
 {
     public class Faker
     {
+        private readonly string pluginPath = System.IO.Path.Combine(Directory.GetCurrentDirectory(), "Plugins");
+        private List<IPlugin> plugins = new List<IPlugin>();
+
         private static Dictionary<Type, Func<Object>> @switch = new Dictionary<Type, Func<Object>> {
             { typeof(int), () => GenerateInt32() },
-            { typeof(string), () => GenerateString() },
             { typeof(float), () => GenerateFloat() },
             { typeof(long), () => GenerateInt64() },
             { typeof(double), () => GenerateDouble() },
             { typeof(char), () => GenerateChar() },
             { typeof(bool), () => GenerateBool() },
             { typeof(byte), () => GenerateByte() },
-            { typeof(DateTime), () => GenerateDateTime() },
             { typeof(List<int>), () => GenerateIntList()},
         };
             
         private HashSet<Type> _usedClasses = new HashSet<Type>();
         private static Random random = new Random();
 
+        public Faker()
+        {
+            RefreshPlugins();
+        }
+        
         public T Create<T>() where T : class
         {
             Type type = typeof(T);
@@ -137,6 +143,29 @@ namespace ClassLibrary1
 
             return result.ToArray();
         }
+        
+        private void RefreshPlugins()
+        {
+            plugins.Clear();
+
+            DirectoryInfo pluginDirectory = new DirectoryInfo(pluginPath);
+            if (!pluginDirectory.Exists)
+                pluginDirectory.Create();
+        
+            var pluginFiles = Directory.GetFiles(pluginPath, "*.dll");
+            foreach (var file in pluginFiles)
+            {
+                Assembly asm = Assembly.LoadFrom(file);
+                var types = asm.GetTypes().
+                    Where(t => t.GetInterfaces(). Where(i => i.FullName == typeof(IPlugin).FullName).Any());
+
+                foreach (var type in types)
+                {           
+                    var plugin = asm.CreateInstance(type.FullName) as IPlugin;
+                    @switch.Add(plugin.GetGeneratorType(), () => plugin.Generate());
+                }
+            }
+        }
 
         public static int GenerateInt32()
         {
@@ -157,14 +186,6 @@ namespace ClassLibrary1
             return (float)(mantissa * exponent);
         }
 
-        public static string GenerateString()
-        {
-            const int length = 8;
-            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZadcdefghijklmnopqrstuvwxyz0123456789";
-            
-            return new string(Enumerable.Repeat(chars, length).Select(s => s[random.Next(s.Length)]).ToArray());
-        }
-        
         public static char GenerateChar()
         {
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZadcdefghijklmnopqrstuvwxyz0123456789";
@@ -187,13 +208,6 @@ namespace ClassLibrary1
         public static bool GenerateBool()
         {
             return random.Next(100) <= 50;
-        }
-        
-        public static DateTime GenerateDateTime()
-        {
-            DateTime start = new DateTime(1995, 1, 1);
-            int range = (DateTime.Today - start).Days;           
-            return start.AddDays(random.Next(range));
         }
         
         public static List<int> GenerateIntList()

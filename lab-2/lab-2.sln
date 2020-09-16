@@ -4,6 +4,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Faker", "Faker\Faker.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App", "App\App.csproj", "{4523994A-DBDE-4CB8-A9DB-4A618F96D147}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringGeneratorLib", "StringGeneratorLib\StringGeneratorLib.csproj", "{7A8B9044-A408-44AA-AD57-CADC1C4911EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateTimeGeneratorLib", "DateTimeGeneratorLib\DateTimeGeneratorLib.csproj", "{68C04AC2-9E40-4EFD-A05E-446F1C9352BD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,5 +18,13 @@ Global
 		{4523994A-DBDE-4CB8-A9DB-4A618F96D147}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4523994A-DBDE-4CB8-A9DB-4A618F96D147}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4523994A-DBDE-4CB8-A9DB-4A618F96D147}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A8B9044-A408-44AA-AD57-CADC1C4911EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A8B9044-A408-44AA-AD57-CADC1C4911EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A8B9044-A408-44AA-AD57-CADC1C4911EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A8B9044-A408-44AA-AD57-CADC1C4911EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68C04AC2-9E40-4EFD-A05E-446F1C9352BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68C04AC2-9E40-4EFD-A05E-446F1C9352BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68C04AC2-9E40-4EFD-A05E-446F1C9352BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68C04AC2-9E40-4EFD-A05E-446F1C9352BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
