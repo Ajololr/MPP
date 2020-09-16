@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using ClassLibrary1;
 
 namespace App
@@ -21,24 +22,24 @@ namespace App
         private long _longValue;
         private double _doubleValue;
         public Bar bar;
+        public List<int> list;
+        public bool b;
 
-        public Foo(int integerValue, float floatValue)
+        public Foo()
+        {
+        }
+        
+        public Foo(int integerValue, float floatValue, List<int> list)
         {
             IntegerValue = integerValue;
             _floatValue = floatValue;
-        }
-
-        private Foo(int integerValue)
-        {
-            
+            this.list = list;
         }
 
         public int IntegerValue
         {
             set => _integerValue = value;
         }
-
-        public float FloatValue => _floatValue;
 
         public long LongValue
         {
@@ -57,16 +58,27 @@ namespace App
     {
         public int IntValue;
         public string StringValue;
-        private Other _other;
-        public Bar(int intValue, Other other)
+        public Other _other;
+        public Dictionary<int,int> Dictionary;
+
+        public Bar()
+        {
+            
+        }
+        
+        public Bar(int intValue)
         {
             IntValue = intValue;
-            _other = other;
         }
     }
 
     class Other
     {
         public DateTime DateTime;
+
+        public Other()
+        {
+            
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO.IsolatedStorage;
 using System.Linq;
 using System.Reflection;
 
@@ -7,14 +8,19 @@ namespace ClassLibrary1
 {
     public class Faker
     {
-        private Dictionary<Type, Func<Object>> @switch = new Dictionary<Type, Func<Object>> {
+        private static Dictionary<Type, Func<Object>> @switch = new Dictionary<Type, Func<Object>> {
             { typeof(int), () => GenerateInt32() },
             { typeof(string), () => GenerateString() },
             { typeof(float), () => GenerateFloat() },
             { typeof(long), () => GenerateInt64() },
             { typeof(double), () => GenerateDouble() },
+            { typeof(char), () => GenerateChar() },
+            { typeof(bool), () => GenerateBool() },
+            { typeof(byte), () => GenerateByte() },
             { typeof(DateTime), () => GenerateDateTime() },
+            { typeof(List<int>), () => GenerateIntList()},
         };
+            
         private HashSet<Type> _usedClasses = new HashSet<Type>();
         private static Random random = new Random();
 
@@ -30,18 +36,25 @@ namespace ClassLibrary1
             
             _usedClasses.Add(type);
             ConstructorInfo constructor = selectConstructor(type);
-
+            if (constructor == null) return null;
             Object[] param = GenerateParams(constructor);
-
             Object obj = constructor.Invoke(param);
+            
+            SetFields(obj,type);
+            SetProperties(obj,type);
+            
+            return obj;
+        }
 
+        private void SetFields(Object obj, Type type)
+        {
             foreach (FieldInfo info in type.GetFields())
             {
                 Type fieldType = info.FieldType;
                 
                 if (!@switch.ContainsKey(fieldType))
                 {
-                    if (fieldType.IsClass)
+                    if (IsDto(fieldType))
                     {
                         info.SetValue(obj, CreateInner(fieldType));
                     }
@@ -51,7 +64,10 @@ namespace ClassLibrary1
                     info.SetValue(obj, @switch[fieldType]());
                 }
             }
+        }
 
+        private void SetProperties(Object obj, Type type)
+        {
             foreach (PropertyInfo info in type.GetProperties())
             {
                 if (!info.CanWrite) continue;
@@ -60,7 +76,7 @@ namespace ClassLibrary1
                 
                 if (!@switch.ContainsKey(propertyType))
                 {
-                    if (propertyType.IsClass)
+                    if (IsDto(propertyType))
                     {
                         info.SetValue(obj, CreateInner(propertyType));
                     }
@@ -70,8 +86,11 @@ namespace ClassLibrary1
                     info.SetValue(obj, @switch[info.PropertyType]());
                 }
             }
-            
-            return obj;
+        }
+        
+        public static bool IsDto(Type type)
+        {
+            return type.IsClass && !type.IsValueType && !type.IsGenericType;
         }
 
         private ConstructorInfo selectConstructor(Type type)
@@ -82,10 +101,13 @@ namespace ClassLibrary1
 
             foreach (ConstructorInfo info in constructors)
             {
-                constructorMap.Add(info, info.GetParameters().Length);
+                if (info.GetParameters().All(param => @switch.ContainsKey(param.ParameterType) || IsDto(param.ParameterType)))
+                    constructorMap.Add(info, info.GetParameters().Length);
             }
 
             int[] values = constructorMap.Values.ToArray();
+            if (values.Length == 0)
+                return null;
             int maxValue = values.Max();
             int maxIndex = values.ToList().IndexOf(maxValue);
 
@@ -102,7 +124,7 @@ namespace ClassLibrary1
                 
                 if (!@switch.ContainsKey(parameterType))
                 {
-                    if (parameterType.IsClass)
+                    if (IsDto(parameterType))
                     {
                         result.AddLast(CreateInner(parameterType));
                     }
@@ -138,9 +160,23 @@ namespace ClassLibrary1
         public static string GenerateString()
         {
             const int length = 8;
-            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZadcdefghijklmnopqrstuvwxyz0123456789";
             
             return new string(Enumerable.Repeat(chars, length).Select(s => s[random.Next(s.Length)]).ToArray());
+        }
+        
+        public static char GenerateChar()
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZadcdefghijklmnopqrstuvwxyz0123456789";
+            
+            return chars[random.Next(chars.Length - 1)];
+        }
+        
+        public static byte GenerateByte()
+        {
+            byte[] buf = new byte[1];
+            random.NextBytes(buf);
+            return buf[0];
         }
         
         public static double GenerateDouble()
@@ -148,11 +184,29 @@ namespace ClassLibrary1
             return random.NextDouble();
         }
         
+        public static bool GenerateBool()
+        {
+            return random.Next(100) <= 50;
+        }
+        
         public static DateTime GenerateDateTime()
         {
             DateTime start = new DateTime(1995, 1, 1);
             int range = (DateTime.Today - start).Days;           
             return start.AddDays(random.Next(range));
+        }
+        
+        public static List<int> GenerateIntList()
+        {
+            const int length = 5;
+            var res = new List<int>(); 
+            
+            for (int i = 0; i < length; i++)
+            {
+                res.Add((int)@switch[typeof(int)]());
+            }
+
+            return res;
         }
     }
 }
