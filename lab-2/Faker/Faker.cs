@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -8,10 +9,11 @@ namespace ClassLibrary1
 {
     public class Faker
     {
+        private FakerConfig _config;
         private readonly string pluginPath = System.IO.Path.Combine(Directory.GetCurrentDirectory(), "Plugins");
         private List<IPlugin> plugins = new List<IPlugin>();
 
-        private static Dictionary<Type, Func<Object>> @switch = new Dictionary<Type, Func<Object>> {
+        private static Dictionary<Type, Func<Object>> _switch = new Dictionary<Type, Func<Object>> {
             { typeof(int), () => GenerateInt32() },
             { typeof(float), () => GenerateFloat() },
             { typeof(long), () => GenerateInt64() },
@@ -19,11 +21,15 @@ namespace ClassLibrary1
             { typeof(char), () => GenerateChar() },
             { typeof(bool), () => GenerateBool() },
             { typeof(byte), () => GenerateByte() },
-            { typeof(List<int>), () => GenerateIntList()},
         };
             
         private HashSet<Type> _usedClasses = new HashSet<Type>();
         private static Random random = new Random();
+
+        public Faker(FakerConfig config) : this()
+        {
+            _config = config;
+        }
 
         public Faker()
         {
@@ -33,6 +39,7 @@ namespace ClassLibrary1
         public T Create<T>() where T : class
         {
             Type type = typeof(T);
+            
             return (T)CreateInner(type);
         }
 
@@ -41,10 +48,11 @@ namespace ClassLibrary1
             if (_usedClasses.Contains(type)) throw new Exception("Recursive DTO");
             
             _usedClasses.Add(type);
-            ConstructorInfo constructor = selectConstructor(type);
+            ConstructorInfo constructor = SelectConstructor(type);
             if (constructor == null) return null;
             Object[] param = GenerateParams(constructor);
             Object obj = constructor.Invoke(param);
+
             
             SetFields(obj,type);
             SetProperties(obj,type);
@@ -52,22 +60,51 @@ namespace ClassLibrary1
             return obj;
         }
 
-        private void SetFields(Object obj, Type type)
+        private bool isValidList(Type fieldType)
         {
-            foreach (FieldInfo info in type.GetFields())
+            return fieldType.IsGenericType 
+                   && fieldType.GetGenericTypeDefinition() == typeof(List<>)
+                   && _switch.ContainsKey(fieldType.GetGenericArguments()[0]);
+        }
+
+        private void SetFields(Object obj, Type classType)
+        {
+            foreach (FieldInfo info in classType.GetFields())
             {
                 Type fieldType = info.FieldType;
-                
-                if (!@switch.ContainsKey(fieldType))
+
+                if (!_switch.ContainsKey(fieldType))
                 {
-                    if (IsDto(fieldType))
+                    if ( fieldType.IsGenericType 
+                         && fieldType.GetGenericTypeDefinition() == typeof(List<>)
+                         && _switch.ContainsKey(fieldType.GetGenericArguments()[0]))
+                    {
+                        Type innerType = fieldType.GetGenericArguments()[0];
+                        
+                        List<Object> list = GenerateList(innerType);
+
+                        if (list[0] is int)
+                        {
+                            info.SetValue(obj, list.Cast<int>().ToList());
+                        } else if (list[0] is bool)
+                        {
+                            info.SetValue(obj, list.Cast<bool>().ToList());
+                        } else if (list[0] is DateTime)
+                        {
+                            info.SetValue(obj, list.Cast<DateTime>().ToList());
+                        } else if (list[0] is char)
+                        {
+                            info.SetValue(obj, list.Cast<char>().ToList());
+                        }
+                    }
+                    else if (IsDto(fieldType))
                     {
                         info.SetValue(obj, CreateInner(fieldType));
                     }
                 }
                 else
                 {
-                    info.SetValue(obj, @switch[fieldType]());
+                    info.SetValue(obj, _switch[fieldType]());
                 }
             }
         }
@@ -80,16 +117,38 @@ namespace ClassLibrary1
                 
                 Type propertyType = info.PropertyType;
                 
-                if (!@switch.ContainsKey(propertyType))
+                if (!_switch.ContainsKey(propertyType))
                 {
-                    if (IsDto(propertyType))
+                    if ( propertyType.IsGenericType 
+                         && propertyType.GetGenericTypeDefinition() == typeof(List<>)
+                         && _switch.ContainsKey(propertyType.GetGenericArguments()[0]))
+                    {
+                        Type innerType = propertyType.GetGenericArguments()[0];
+                        
+                        List<Object> list = GenerateList(innerType);
+
+                        if (list[0] is int)
+                        {
+                            info.SetValue(obj, list.Cast<int>().ToList());
+                        } else if (list[0] is bool)
+                        {
+                            info.SetValue(obj, list.Cast<bool>().ToList());
+                        } else if (list[0] is DateTime)
+                        {
+                            info.SetValue(obj, list.Cast<DateTime>().ToList());
+                        } else if (list[0] is char)
+                        {
+                            info.SetValue(obj, list.Cast<char>().ToList());
+                        }
+                    }
+                    else if (IsDto(propertyType))
                     {
                         info.SetValue(obj, CreateInner(propertyType));
                     }
                 }
                 else
                 {
-                    info.SetValue(obj, @switch[info.PropertyType]());
+                    info.SetValue(obj, _switch[info.PropertyType]());
                 }
             }
         }
@@ -99,19 +158,25 @@ namespace ClassLibrary1
             return type.IsClass && !type.IsValueType && !type.IsGenericType;
         }
 
-        private ConstructorInfo selectConstructor(Type type)
+        private ConstructorInfo SelectConstructor(Type type)
         {
-            Dictionary<ConstructorInfo, int> constructorMap = new Dictionary<ConstructorInfo, int>();
+            List<ConstructorInfo> constructors = new List<ConstructorInfo>();
+            List<int> lengthList = new List<int>();
             
-            ConstructorInfo[] constructors = type.GetConstructors();
-
-            foreach (ConstructorInfo info in constructors)
+            foreach (ConstructorInfo info in type.GetConstructors())
             {
-                if (info.GetParameters().All(param => @switch.ContainsKey(param.ParameterType) || IsDto(param.ParameterType)))
-                    constructorMap.Add(info, info.GetParameters().Length);
+                if (info.GetParameters().All(param =>
+                    _switch.ContainsKey(param.ParameterType)
+                    || isValidList(param.ParameterType)
+                    || IsDto(param.ParameterType)))
+                {
+                    constructors.Add(info);
+                    lengthList.Add(info.GetParameters().Length);
+                }
             }
+            
 
-            int[] values = constructorMap.Values.ToArray();
+            int[] values = lengthList.ToArray();
             if (values.Length == 0)
                 return null;
             int maxValue = values.Max();
@@ -128,16 +193,38 @@ namespace ClassLibrary1
             {
                 Type parameterType = info.ParameterType;
                 
-                if (!@switch.ContainsKey(parameterType))
+                if (!_switch.ContainsKey(parameterType))
                 {
-                    if (IsDto(parameterType))
+                    if ( parameterType.IsGenericType 
+                         && parameterType.GetGenericTypeDefinition() == typeof(List<>)
+                         && _switch.ContainsKey(parameterType.GetGenericArguments()[0]))
+                    {
+                        Type innerType = parameterType.GetGenericArguments()[0];
+                        
+                        List<Object> list = GenerateList(innerType);
+
+                        if (list[0] is int)
+                        {
+                            result.AddLast(list.Cast<int>().ToList());
+                        } else if (list[0] is bool)
+                        {
+                            result.AddLast(list.Cast<bool>().ToList());
+                        } else if (list[0] is DateTime)
+                        {
+                            result.AddLast(list.Cast<DateTime>().ToList());
+                        } else if (list[0] is char)
+                        {
+                            result.AddLast(list.Cast<char>().ToList());
+                        }
+                    }
+                    else if (IsDto(parameterType))
                     {
                         result.AddLast(CreateInner(parameterType));
                     }
                 }
                 else
                 {
-                    result.AddLast(@switch[parameterType]());
+                    result.AddLast(_switch[parameterType]());
                 }
             }
 
@@ -162,7 +249,7 @@ namespace ClassLibrary1
                 foreach (var type in types)
                 {           
                     var plugin = asm.CreateInstance(type.FullName) as IPlugin;
-                    @switch.Add(plugin.GetGeneratorType(), () => plugin.Generate());
+                    _switch.Add(plugin.GetGeneratorType(), () => plugin.Generate());
                 }
             }
         }
@@ -210,16 +297,20 @@ namespace ClassLibrary1
             return random.Next(100) <= 50;
         }
         
-        public static List<int> GenerateIntList()
+        public static List<Object> GenerateList(Type innerType)
         {
-            const int length = 5;
-            var res = new List<int>(); 
-            
-            for (int i = 0; i < length; i++)
-            {
-                res.Add((int)@switch[typeof(int)]());
-            }
+            int length = random.Next(1, 10);
+            List<Object> res = null;
 
+            if (_switch.ContainsKey(innerType))
+            {
+                res = new List<Object>();
+                for (int i = 0; i < length; i++)
+                {
+                    res.Add(_switch[innerType]());
+                }
+            }
+            
             return res;
         }
     }

@@ -8,28 +8,40 @@ namespace App
     {
         static void Main(string[] args)
         {
+            Foo foo;
             Faker faker = new Faker();
-            Foo foo = faker.Create<Foo>();
+            foo = faker.Create<Foo>();
             Console.WriteLine(foo);
         }
     }
 
+    class StrGenerator
+    {
+        
+    }
+    
     class Foo
     {
         private int _integerValue;
         private float _floatValue;
+        public List<DateTime> list;
         public string StingValue;
         private long _longValue;
         private double _doubleValue;
         public Bar bar;
-        public List<int> list;
         public bool b;
 
         public Foo()
         {
         }
         
-        public Foo(int integerValue, float floatValue, List<int> list)
+        public Foo(int integerValue, List<DateTime> list)
+        {
+            IntegerValue = integerValue;
+            this.list = list;
+        }
+        
+        public Foo(int integerValue, float floatValue, List<DateTime> list, decimal dec)
         {
             IntegerValue = integerValue;
             _floatValue = floatValue;
@@ -75,7 +87,6 @@ namespace App
     class Other
     {
         public DateTime DateTime;
-        public Bar Bar;
 
     }
 }
