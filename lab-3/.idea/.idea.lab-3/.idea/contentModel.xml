@@ -19,10 +19,14 @@
       <e p="lab-3.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="WpfApp" t="IncludeRecursive">
+        <e p="Annotations.cs" t="Include" />
         <e p="App.xaml" t="Include" />
         <e p="App.xaml.cs" t="Include" />
+        <e p="ApplicationViewModel.cs" t="Include" />
         <e p="AssemblyInfo.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Dll.cs" t="Include" />
+        <e p="DllViewModel.cs" t="Include" />
         <e p="MainWindow.xaml" t="Include" />
         <e p="MainWindow.xaml.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
@@ -34,6 +38,7 @@
             </e>
           </e>
         </e>
+        <e p="RelayCommand.cs" t="Include" />
         <e p="WpfApp.csproj" t="IncludeRecursive" />
       </e>
     </e>

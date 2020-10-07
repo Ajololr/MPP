@@ -5,20 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" WindowState="Maximized">
+    <Window.Resources>
+        <Style TargetType="TreeView">
+            <Setter Property="FontSize" Value="18" />
+        </Style>
+        <Style TargetType="TreeViewItem">
+            <Setter Property="FontSize" Value="18" />
+        </Style>
+    </Window.Resources>
     <Grid x:Name="grid1">
-        <TreeView>
-            <TreeViewItem Header="Employee1">
-                <TreeViewItem Header="Jesper"/>
-                <TreeViewItem Header="Aaberg"/>
-                <TreeViewItem Header="12345"/>
-            </TreeViewItem>
-            <TreeViewItem Header="Employee2">
-                <TreeViewItem Header="Dominik"/>
-                <TreeViewItem Header="Paiha"/>
-                <TreeViewItem Header="98765"/>
-            </TreeViewItem>
-        </TreeView>
-        <Button x:Name="loadButton" Click="OnClick" Width="100" Height="30" Content="Select DLL" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="0.85*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="0.15*" />
+        </Grid.RowDefinitions>
+        <ListBox Grid.Column="0" ItemsSource="{Binding Dlls}"
+                 SelectedItem="{Binding SelectedDll}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="5">
+                        <TextBlock FontSize="18" Text="{Binding Path=Name}" />
+                        <TextBlock Text="{Binding Path=Path}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
+            <Button Width="50px" Command="{Binding AddCommand}">Add</Button>
+        </StackPanel>
+        <ScrollViewer Grid.Row="0" Grid.Column="1" DataContext="{Binding SelectedDll}">
+            <TreeView Name="AssemblyTreeView" ItemsSource="{Binding AssemblyInfo.Children}">
+                <TreeView.ItemTemplate>
+                    <HierarchicalDataTemplate ItemsSource="{Binding Children}">
+                        <TextBlock Text="{Binding Name}" />
+                    </HierarchicalDataTemplate>
+                </TreeView.ItemTemplate>
+            </TreeView>
+        </ScrollViewer>
     </Grid>
 </Window>

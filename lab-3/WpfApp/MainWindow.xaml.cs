@@ -22,18 +22,19 @@ namespace WpfApp
         public MainWindow()
         {
             InitializeComponent();
+            
+            DataContext = new ApplicationViewModel();
         }
 
-        public void OnClick(object sender, RoutedEventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Dll files(*.dll)|*.dll";
-            openFileDialog.ShowDialog();
-            string filename = openFileDialog.FileName;
-            if (filename == "") return;
-            AssemblyInfo assemblyInfo = AssemblyLib.GetAssemblyInfo(filename);
-            Console.WriteLine(assemblyInfo);
-        }
-        
+        // public void OnClick(object sender, RoutedEventArgs e)
+        // {
+        //     OpenFileDialog openFileDialog = new OpenFileDialog();
+        //     openFileDialog.Filter = "Dll files(*.dll)|*.dll";
+        //     openFileDialog.ShowDialog();
+        //     string filename = openFileDialog.FileName;
+        //     if (filename == "") return;
+        //     AssemblyInfo assemblyInfo = AssemblyLib.GetAssemblyInfo(filename);
+        //     Console.WriteLine(assemblyInfo);
+        // }
     }
 }
