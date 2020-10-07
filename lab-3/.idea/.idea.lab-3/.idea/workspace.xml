@@ -23,16 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13f69d24-d916-41d8-9dd9-51bd019abd9d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/WpfApp/Annotations.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WpfApp/Dll.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WpfApp/DllViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WpfApp/RelayCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab-2/.idea/.idea.lab-2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab-2/.idea/.idea.lab-2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.lab-3/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lab-3/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.lab-3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lab-3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly Lib/Class1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly Lib/Class1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WpfApp/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/WpfApp/MainWindow.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WpfApp/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WpfApp/MainWindow.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-3.sln" beforeDir="false" afterPath="$PROJECT_DIR$/lab-3.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +52,7 @@
         <option value="$PROJECT_DIR$/WpfApp/Dll.cs" />
         <option value="$PROJECT_DIR$/WpfApp/MainWindow.xaml" />
         <option value="$PROJECT_DIR$/Assembly Lib/Class1.cs" />
+        <option value="$PROJECT_DIR$/TestProject/UnitTest1.cs" />
       </list>
     </option>
   </component>
@@ -115,7 +107,16 @@
       <workItem from="1601481682879" duration="3626000" />
       <workItem from="1602021361186" duration="3463000" />
       <workItem from="1602067649300" duration="2964000" />
+      <workItem from="1602084485059" duration="397000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: add lab-3">
+      <created>1602084507041</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602084507041</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +138,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="feat: add lab-3" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add lab-3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601368478704">
@@ -231,14 +234,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="288" key="GridCell.Tab.4.right/0.0.1536.824@0.0.1536.824" timestamp="1602070615420" />
-    <state x="361" y="144" key="Rider.ProjectTemplateDialog.Size" timestamp="1601457156431">
+    <state x="361" y="144" key="Rider.ProjectTemplateDialog.Size" timestamp="1602084859731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="144" key="Rider.ProjectTemplateDialog.Size/0.0.1536.824@0.0.1536.824" timestamp="1601457156431" />
+    <state x="361" y="144" key="Rider.ProjectTemplateDialog.Size/0.0.1536.824@0.0.1536.824" timestamp="1602084859731" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1601368863115">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1601368863115" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1602084509524">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1602084509524" />
     <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1602070595425">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

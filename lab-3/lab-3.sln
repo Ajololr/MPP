@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly Lib", "Assembly Li
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp", "WpfApp\WpfApp.csproj", "{29B13771-F71C-4154-92E6-C8D07CCC4431}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\TestProject.csproj", "{EAFBF75D-E959-48E5-A48D-F2500C297C4C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,5 +16,9 @@ Global
 		{29B13771-F71C-4154-92E6-C8D07CCC4431}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29B13771-F71C-4154-92E6-C8D07CCC4431}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29B13771-F71C-4154-92E6-C8D07CCC4431}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAFBF75D-E959-48E5-A48D-F2500C297C4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAFBF75D-E959-48E5-A48D-F2500C297C4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAFBF75D-E959-48E5-A48D-F2500C297C4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAFBF75D-E959-48E5-A48D-F2500C297C4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
