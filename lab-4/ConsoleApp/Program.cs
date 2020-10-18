@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Threading.Tasks.Dataflow;
 using TestsClassGenerator;
 
 class Dataflow
 {
-   private const string DestPath = "E:\\University\\СПП\\lab-4\\Output\\output.txt";
+   private const string DestPath = "E:\\University\\СПП\\lab-4\\Output\\output.cs";
    
    static void Main()
    {
@@ -24,9 +24,8 @@ class Dataflow
          Console.WriteLine("Generating test class...");
          
          TestClassGenerator classGenerator = new TestClassGenerator();
-         classGenerator.GenerateTestClasses(text);
          
-         return text;
+         return classGenerator.GenerateTestClasses(text);
       });
 
       var saveTestClassToFile = new ActionBlock<string>(async text =>
@@ -43,7 +42,7 @@ class Dataflow
       loadSourceFileToMemory.LinkTo(generateTestClass, linkOptions);
       generateTestClass.LinkTo(saveTestClassToFile, linkOptions);
 
-      loadSourceFileToMemory.Post("E:\\University\\СПП\\lab-1\\Tracer\\TracerImpl.cs");
+      loadSourceFileToMemory.Post("E:\\University\\СПП\\lab-2\\Faker\\Faker.cs");
 
       loadSourceFileToMemory.Complete();
 
@@ -64,12 +63,12 @@ class Dataflow
 class Test
 {
    
-   public void FooBar()
+   public void Foo()
    {
       
    }
    
-   private void BarFoo()
+   private void Bar()
    {
       
    }

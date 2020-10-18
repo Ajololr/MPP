@@ -1,102 +1,76 @@
 using System;
-using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Threading;
+using System.IO;
+using System.Threading.Tasks.Dataflow;
+using TestsClassGenerator;
 
-namespace Tracer
+class Dataflow
 {
-    
-    public class TracerImpl : ITracer
-    {
-        public readonly TraceResult Result = new TraceResult();
-        private ConcurrentDictionary<int, Stack<MethodInfo>> _methodsListMap = new ConcurrentDictionary<int, Stack<MethodInfo>>();
-        private ConcurrentStack<Stopwatch> _watch = new ConcurrentStack<Stopwatch>();
-        public void StartTrace()
-        {
-            string className = "";
-            string methodName = "";
-            int threadId = -1;
+   private const string DestPath = "E:\\University\\СПП\\lab-4\\Output\\output.txt";
+   
+   static void Main()
+   {
+      var loadSourceFileToMemory = new TransformBlock<string, string>(async path =>
+      {
+         Console.WriteLine("Loading to memory '{0}'...", path);
 
-            GetMethodData(out methodName, out className, out threadId);
-            MethodInfo methodInfo = new MethodInfo(methodName, className);
+         using (StreamReader SourceReader = File.OpenText(path))
+         {
+            return await SourceReader.ReadToEndAsync();
+         }
+      });
 
-            ThreadInfo threadInfo = new ThreadInfo(threadId);
+      var generateTestClass = new TransformBlock<string, string>(async text =>
+      {
+         Console.WriteLine("Generating test class...");
+         
+         TestClassGenerator classGenerator = new TestClassGenerator();
+         classGenerator.GenerateTestClasses(text);
+         
+         return text;
+      });
 
-            LinkedListNode<ThreadInfo> node = Result.Threads.Find(threadInfo);
-            
-            if (node == null)
-            {
-                node = Result.Threads.AddLast(threadInfo);
-                node.Value.Methods.AddLast(methodInfo);
-                _methodsListMap[threadId] = new Stack<MethodInfo>();
-            }
-            else
-            {
-                if (_methodsListMap[threadId].Count != 0)
-                {
-                    MethodInfo mf;
-                    if (_methodsListMap[threadId].TryPeek(out mf))
-                    {
-                        mf.Methods.AddLast(methodInfo);
-                    }
-                }
-                else
-                {
-                    node.Value.Methods.AddLast(methodInfo);
-                }
-            }
-            
-            _methodsListMap[threadId].Push(methodInfo);
-            _watch.Push(System.Diagnostics.Stopwatch.StartNew());
-        }
+      var saveTestClassToFile = new ActionBlock<string>(async text =>
+      {
+         using (StreamWriter DestinationWriter = File.CreateText(DestPath))
+         {
+            Console.WriteLine("Saving class to file...");
+            await DestinationWriter.WriteAsync(text);
+         }
+      });
 
-        public void StopTrace()
-        {
-            Stopwatch stopwatch;
-            if (_watch.TryPop(out stopwatch))
-            {
-                stopwatch.Stop();
-            }
-            long elapsedMs = stopwatch.ElapsedMilliseconds;
+      var linkOptions = new DataflowLinkOptions { PropagateCompletion = true };
 
-            int threadId = GetThreadId();
-            MethodInfo mf;
-            if (_methodsListMap[threadId].TryPop(out mf))
-            {
-                mf.ElapsedMs = elapsedMs;
-            }
-            
-            ThreadInfo threadInfo = new ThreadInfo(threadId);
-            LinkedListNode<ThreadInfo> node = Result.Threads.Find(threadInfo);
-            node.Value.ElapsedMs += elapsedMs;
-        }
+      loadSourceFileToMemory.LinkTo(generateTestClass, linkOptions);
+      generateTestClass.LinkTo(saveTestClassToFile, linkOptions);
 
-        public TraceResult GetTraceResult()
-        {
-            return Result;
-        }
-        
-        [MethodImpl(MethodImplOptions.NoInlining)]
-        private void GetMethodData(out string methodName, out string className, out int threadId)
-        {
-            const int index = 2;
-            
-            var st = new StackTrace();
-            var sf = st.GetFrame(index);
-            
-            MethodBase method = sf.GetMethod();
-            
-            className = method.ReflectedType.Name;
-            methodName = method.Name;
-            threadId = GetThreadId();
-        }
+      loadSourceFileToMemory.Post("E:\\University\\СПП\\lab-4\\ConsoleApp\\Program.cs");
 
-        private int GetThreadId()
-        {
-            return Thread.CurrentThread.ManagedThreadId;
-        }
-    }
+      loadSourceFileToMemory.Complete();
+
+      saveTestClassToFile.Completion.Wait();
+   }
+
+   public void Foo()
+   {
+      
+   }
+   
+   private void Bar()
+   {
+      
+   }
+}
+
+class Test
+{
+   
+   public void Foo()
+   {
+      
+   }
+   
+   private void Bar()
+   {
+      
+   }
 }
