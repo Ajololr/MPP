@@ -9,22 +9,29 @@ namespace Assembly_Lib
     {
         public static AssemblyInfo GetAssemblyInfo(string path)
         {
-            AssemblyInfo assemblyInfo = new AssemblyInfo();
-            Assembly assembly = Assembly.LoadFile(path);
-            foreach (Type type in assembly.GetTypes())
+            try
             {
-                string currentNamespace = type.Namespace;
-                if (!assemblyInfo.NamespaceInfos.ContainsKey(currentNamespace))
+                AssemblyInfo assemblyInfo = new AssemblyInfo();
+                Assembly assembly = Assembly.LoadFile(path);
+                foreach (Type type in assembly.GetTypes())
                 {
-                    assemblyInfo.NamespaceInfos.Add(currentNamespace, new NamespaceInfo());
+                    string currentNamespace = type.Namespace;
+                    if (!assemblyInfo.NamespaceInfos.ContainsKey(currentNamespace))
+                    {
+                        assemblyInfo.NamespaceInfos.Add(currentNamespace, new NamespaceInfo());
+                    }
+                    NamespaceInfo namespaceInfo = assemblyInfo.NamespaceInfos[currentNamespace];
+
+                    namespaceInfo.DataTypeInfos.AddLast(new DataTypeInfo(type.GetFields(), type.GetProperties(),
+                        type.GetMethods(), type.Name));
                 }
-                NamespaceInfo namespaceInfo = assemblyInfo.NamespaceInfos[currentNamespace];
 
-                namespaceInfo.DataTypeInfos.AddLast(new DataTypeInfo(type.GetFields(), type.GetProperties(),
-                    type.GetMethods(), type.Name));
+                return assemblyInfo;
             }
-
-            return assemblyInfo;
+            catch (Exception e)
+            {
+                return null;
+            }
         } 
         
         public static Node BuildTree(AssemblyInfo assemblyInfo)

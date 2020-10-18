@@ -38,7 +38,7 @@ namespace WpfApp
         { 
             get 
             {
-                return AssemblyLib.BuildTree(_assemblyInfo);
+                return _assemblyInfo != null ? AssemblyLib.BuildTree(_assemblyInfo) : null;
             } 
         }
         
