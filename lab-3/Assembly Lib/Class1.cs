@@ -66,7 +66,7 @@ namespace Assembly_Lib
                             parametersString = parametersString.Substring(0, parametersString.Length - 2);
                         }
 
-                        methodInfo.Name = "Method " + (method.IsPublic ? "public " : "") + (method.IsPrivate ? "private " : "") + (method.IsStatic ? "static " : "") + method.ReturnType.Name + " " + method.Name + "(" + parametersString + ")";
+                        methodInfo.Name = "Method " + (method.IsStatic ? "static " : "") + method.ReturnType.Name + " " + method.Name + "(" + parametersString + ")";
                         classInfo.Children.Add(methodInfo);
                     }
 
@@ -82,7 +82,7 @@ namespace Assembly_Lib
                     foreach (FieldInfo field in fields)
                     {
                         Node fieldInfo = new Node();
-                        fieldInfo.Name = "Field "  + (field.IsPublic ? "public " : "") + (field.IsPrivate ? "private " : "") + (field.IsStatic ? "static " : "") + field.FieldType.Name + " " + field.Name;
+                        fieldInfo.Name = "Field " + (field.IsStatic ? "static " : "") + field.FieldType.Name + " " + field.Name;
                         classInfo.Children.Add(fieldInfo);
                     }
 
@@ -128,6 +128,17 @@ namespace Assembly_Lib
         public Node()
         {
             Children = new ObservableCollection<Node>();
+        }
+    }
+}
+
+namespace test
+{
+    public class asd
+    {
+        private void asds()
+        {
+            return;
         }
     }
 }

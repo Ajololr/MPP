@@ -33,6 +33,7 @@ public class SyncEvents
     private EventWaitHandle _exitThreadEvent;
     private WaitHandle[] _eventArray;
 }
+
 public class Producer 
 {
     public Producer(Queue<int> q, SyncEvents e)

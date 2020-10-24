@@ -25,7 +25,6 @@
         <e p="Program.cs" t="Include" />
       </e>
       <e p="lab-4.sln" t="IncludeFlat" />
-      <e p="Output\output.cs" t="Include" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="TestProject" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />

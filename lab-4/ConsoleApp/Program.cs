@@ -5,7 +5,7 @@ using TestsClassGenerator;
 
 class Dataflow
 {
-   private const string DestPath = "E:\\University\\СПП\\lab-4\\Output\\output.cs";
+   private const string DestPath = "E:\\University\\СПП\\lab-4\\Output\\";
    
    static void Main()
    {
@@ -30,7 +30,7 @@ class Dataflow
 
       var saveTestClassToFile = new ActionBlock<string>(async text =>
       {
-         using (StreamWriter DestinationWriter = File.CreateText(DestPath))
+         using (StreamWriter DestinationWriter = File.CreateText(DestPath + "out.cs"))
          {
             Console.WriteLine("Saving class to file...");
             await DestinationWriter.WriteAsync(text);
