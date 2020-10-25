@@ -27,19 +27,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13f69d24-d916-41d8-9dd9-51bd019abd9d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.lab-3/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lab-3/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.lab-3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lab-3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly Lib/Class1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly Lib/Class1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp1/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/UnitTest1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WpfApp/DllViewModel.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/WpfApp/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WpfApp/MainWindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab-3.sln" beforeDir="false" afterPath="$PROJECT_DIR$/lab-3.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab-3.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/lab-3.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab-4/.idea/.idea.lab-4/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab-4/.idea/.idea.lab-4/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab-4/.idea/.idea.lab-4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab-4/.idea/.idea.lab-4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab-4/ConsoleApp/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../lab-4/ConsoleApp/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab-4/TestsClassGenerator/Generator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../lab-4/TestsClassGenerator/Generator.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +40,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/075F726A-F7C9-4CD7-B5EE-08EF3053B45E/c1/d27df502/PropertyPathWorker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/University/СПП/lab-3/WpfApp/MainWindow.xaml.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9CD23B5E-3B0C-4F80-A807-33BCFD1D82E1/29C/Assembly.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9CD23B5E-3B0C-4F80-A807-33BCFD1D82E1/D3/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9CD23B5E-3B0C-4F80-A807-33BCFD1D82E1/2B7/RuntimeModule.cs" root0="SKIP_HIGHLIGHTING" />
@@ -66,10 +56,10 @@
         <option value="$PROJECT_DIR$/TestProject/UnitTest1.cs" />
         <option value="$PROJECT_DIR$/Assembly Lib/Class1.cs" />
         <option value="$PROJECT_DIR$/WpfApp/Dll.cs" />
-        <option value="$PROJECT_DIR$/WpfApp/MainWindow.xaml.cs" />
         <option value="$PROJECT_DIR$/WpfApp/DllViewModel.cs" />
-        <option value="$PROJECT_DIR$/WpfApp/MainWindow.xaml" />
         <option value="$PROJECT_DIR$/WpfApp/ApplicationViewModel.cs" />
+        <option value="$PROJECT_DIR$/WpfApp/MainWindow.xaml.cs" />
+        <option value="$PROJECT_DIR$/WpfApp/MainWindow.xaml" />
       </list>
     </option>
   </component>
@@ -149,7 +139,8 @@
       <workItem from="1603296243314" duration="2783000" />
       <workItem from="1603455110094" duration="688000" />
       <workItem from="1603555570217" duration="2340000" />
-      <workItem from="1603558389486" duration="389000" />
+      <workItem from="1603558389486" duration="1180000" />
+      <workItem from="1603641697377" duration="873000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add lab-3">
       <created>1602084507041</created>
@@ -165,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603019216566</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: remove dll view model">
+      <created>1603563070092</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1603563070092</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,7 +187,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="feat: add lab-3" />
     <MESSAGE value="feat: add tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add tests" />
+    <MESSAGE value="feat: remove dll view model" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: remove dll view model" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601368478704">
@@ -204,22 +203,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="466" height="464" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1603298777137" />
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1603557911971">
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1603563127597">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603557911971" />
-    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1603557911971">
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603563127597" />
+    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1603563127597">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603557911971" />
-    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1603557911971">
+    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603563127597" />
+    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1603563127597">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603557911971" />
-    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1603557911971">
+    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603563127597" />
+    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1603563127597">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603557911971" />
+    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603563127597" />
     <state width="1493" height="288" key="GridCell.Tab.1.bottom" timestamp="1603299027810">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
