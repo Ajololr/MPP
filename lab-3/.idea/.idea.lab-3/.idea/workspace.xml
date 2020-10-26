@@ -26,10 +26,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13f69d24-d916-41d8-9dd9-51bd019abd9d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.lab-3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lab-3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WpfApp/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WpfApp/MainWindow.xaml.cs" afterDir="false" />
-    </list>
+    <list default="true" id="13f69d24-d916-41d8-9dd9-51bd019abd9d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -140,7 +137,7 @@
       <workItem from="1603455110094" duration="688000" />
       <workItem from="1603555570217" duration="2340000" />
       <workItem from="1603558389486" duration="1180000" />
-      <workItem from="1603641697377" duration="873000" />
+      <workItem from="1603641697377" duration="1519000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add lab-3">
       <created>1602084507041</created>
@@ -163,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603563070092</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="refactor: change config">
+      <created>1603642596975</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1603642596976</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,7 +192,8 @@
     <MESSAGE value="feat: add lab-3" />
     <MESSAGE value="feat: add tests" />
     <MESSAGE value="feat: remove dll view model" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: remove dll view model" />
+    <MESSAGE value="refactor: change config" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: change config" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601368478704">
@@ -295,10 +300,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="VCS.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1603556275486" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1603019219489">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1603642617764">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603019219489" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603642617764" />
     <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1602088047292">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
