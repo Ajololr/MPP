@@ -40,7 +40,6 @@
       </e>
       <e p="TestsClassGenerator" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Generator.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
@@ -48,6 +47,7 @@
             </e>
           </e>
         </e>
+        <e p="TestsClassGenerator.cs" t="Include" />
         <e p="TestsClassGenerator.csproj" t="IncludeRecursive" />
       </e>
     </e>

@@ -8,9 +8,9 @@ using TestsClassGenerator;
 class Dataflow
 {
    private const string DestPath = "E:\\University\\СПП\\lab-4\\Output\\";
-   private const int MaxDegreeOfParallelismLoad = 1;
-   private const int MaxDegreeOfParallelismGenerate = 1;
-   private const int MaxDegreeOfParallelismSave = 1;
+   private const int MaxDegreeOfParallelismLoad = 4;
+   private const int MaxDegreeOfParallelismGenerate = 4;
+   private const int MaxDegreeOfParallelismSave = 4;
    private static string[] _input = new[] { 
       "E:\\University\\СПП\\lab-2\\Faker\\Faker.cs", 
       "E:\\University\\СПП\\lab-1\\Tracer\\TracerImpl.cs",
@@ -41,7 +41,7 @@ class Dataflow
 
       var generateTestClass = new TransformManyBlock<string, TestClass>(async text =>
       {
-         Console.WriteLine("Generating test class...");
+         Console.WriteLine("Generating test classes...");
          
          TestClassGenerator classGenerator = new TestClassGenerator();
 
@@ -55,9 +55,9 @@ class Dataflow
       {
          using (StreamWriter DestinationWriter = File.CreateText(DestPath + testClass.FileName))
          {
-            Console.WriteLine("Saving '{0}' class to file...", testClass.FileName);
+            Console.WriteLine("Saving '{0}' on disk...", testClass.FileName);
             await DestinationWriter.WriteAsync(testClass.Source);
-            Console.WriteLine("Saved!");
+            Console.WriteLine("Saved '{0}'!", testClass.FileName);
          }
       }, new ExecutionDataflowBlockOptions
       {
@@ -79,29 +79,5 @@ class Dataflow
       saveTestClassToFile.Completion.Wait();
       sw.Stop();
       Console.WriteLine(sw.ElapsedMilliseconds);
-   }
-
-   public void Foo()
-   {
-      
-   }
-   
-   private void Bar()
-   {
-      
-   }
-}
-
-class Test
-{
-   
-   public void Foo()
-   {
-      
-   }
-   
-   private void Bar()
-   {
-      
    }
 }
