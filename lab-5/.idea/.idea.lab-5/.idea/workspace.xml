@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:test" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ccf32ee7-416c-4f2e-aff6-47541281ce90" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Dependency Injection Tests/Dependency Injection Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab-4/.idea/.idea.lab-4/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab-4/.idea/.idea.lab-4/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab-4/.idea/.idea.lab-4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab-4/.idea/.idea.lab-4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab-4/Input/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab-4/TestProject/TestProject.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../lab-4/TestProject/TestProject.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-5/.idea/.idea.lab-5/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lab-5/.idea/.idea.lab-5/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-5/.idea/.idea.lab-5/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-5/.idea/.idea.lab-5/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-5/.idea/.idea.lab-5/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-5/.idea/.idea.lab-5/.idea/projectSettingsUpdater.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-5/.idea/.idea.lab-5/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-5/.idea/.idea.lab-5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lab-5/.idea/.idea.lab-5/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-5/Dependency Injection Library/Class1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-5/Dependency Injection Library/Dependency Injection Library.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-5/Dependency Injection Test Project/Dependency Injection Test Project.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-5/Dependency Injection Test Project/UnitTest1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-5/lab-5.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-5/lab-5.sln.DotSettings.user" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Dependency Injection Test Project/UnitTest1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Dependency Injection Tests/UnitTest1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/18D5A60D-361A-4AFD-A431-F772FA87FCC3/68/f4f14d69/TestInvoker`1.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Dependency Injection Test Project/UnitTest1.cs" />
+        <option value="$PROJECT_DIR$/TestProject1/UnitTest1.cs" />
+        <option value="$PROJECT_DIR$/Dependency Injection Library/Class1.cs" />
+        <option value="$PROJECT_DIR$/Dependency Injection Tests/UnitTest1.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1k63JGCDnn3hGey5jzWZdd5LoZo" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3502052" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.3002736" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="SolutionBuilderGeneralOptionsPageId" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ccf32ee7-416c-4f2e-aff6-47541281ce90" name="Default Changelist" comment="" />
+      <created>1605007140994</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605007140994</updated>
+      <workItem from="1605007146200" duration="2574000" />
+      <workItem from="1605009757103" duration="196000" />
+      <workItem from="1605009994589" duration="12762000" />
+    </task>
+    <task id="LOCAL-00001" summary="init: start lab 5">
+      <created>1605007477660</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605007477660</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="init: start lab 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="init: start lab 5" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605010373154">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1605010373154" />
+    <state width="490" height="464" key="DebuggerActiveHint" timestamp="1605027102835">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="490" height="464" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1605027102835" />
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1605027887786">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605027887786" />
+    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1605027887786">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605027887786" />
+    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1605027887786">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605027887786" />
+    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1605027887786">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605027887786" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1605027887786">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605027887786" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1605027887786">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1605027887786" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1605027887786">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1605027887786" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1605027887786">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1605027887786" />
+    <state width="1493" height="261" key="GridCell.Tab.2.bottom" timestamp="1605027887786">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605027887786" />
+    <state width="1493" height="261" key="GridCell.Tab.2.center" timestamp="1605027887786">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1605027887786" />
+    <state width="1493" height="261" key="GridCell.Tab.2.left" timestamp="1605027887786">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1605027887786" />
+    <state width="1493" height="261" key="GridCell.Tab.2.right" timestamp="1605027887786">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1605027887786" />
+    <state width="1493" height="261" key="GridCell.Tab.3.bottom" timestamp="1605027887787">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605027887787" />
+    <state width="1493" height="261" key="GridCell.Tab.3.center" timestamp="1605027887787">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1605027887787" />
+    <state width="1493" height="261" key="GridCell.Tab.3.left" timestamp="1605027887787">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1605027887787" />
+    <state width="1493" height="261" key="GridCell.Tab.3.right" timestamp="1605027887787">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1605027887787" />
+    <state width="1493" height="261" key="GridCell.Tab.4.bottom" timestamp="1605027887787">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.4.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605027887787" />
+    <state width="1493" height="261" key="GridCell.Tab.4.center" timestamp="1605027887787">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.4.center/0.0.1536.824@0.0.1536.824" timestamp="1605027887787" />
+    <state width="1493" height="261" key="GridCell.Tab.4.left" timestamp="1605027887787">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.4.left/0.0.1536.824@0.0.1536.824" timestamp="1605027887787" />
+    <state width="1493" height="261" key="GridCell.Tab.4.right" timestamp="1605027887787">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.4.right/0.0.1536.824@0.0.1536.824" timestamp="1605027887787" />
+    <state x="361" y="144" key="Rider.ProjectTemplateDialog.Size" timestamp="1605010001324">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="144" key="Rider.ProjectTemplateDialog.Size/0.0.1536.824@0.0.1536.824" timestamp="1605010001324" />
+    <state x="277" y="57" key="SettingsEditor" timestamp="1605007341677">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1605007341677" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1605007480452">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605007480452" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605020902679">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1605020902679" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Dependency Injection Library/Class1.cs</url>
+          <line>86</line>
+          <properties documentPath="E:\University\СПП\lab-5\Dependency Injection Library\Class1.cs" initialLine="86">
+            <startOffsets>
+              <option value="2576" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2603" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Dependency Injection Tests/UnitTest1.cs</url>
+          <line>112</line>
+          <properties documentPath="E:\University\СПП\lab-5\Dependency Injection Tests\UnitTest1.cs" initialLine="112">
+            <startOffsets>
+              <option value="3201" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3254" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
