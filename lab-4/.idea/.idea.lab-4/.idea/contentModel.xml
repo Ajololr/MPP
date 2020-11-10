@@ -25,6 +25,19 @@
         <e p="Program.cs" t="Include" />
       </e>
       <e p="lab-4.sln" t="IncludeFlat" />
+      <e p="Output" t="Include">
+        <e p="ApplicationViewModel.cs" t="Include" />
+        <e p="asd.cs" t="Include" />
+        <e p="AssemblyLib.cs" t="Include" />
+        <e p="Bar.cs" t="Include" />
+        <e p="Faker.cs" t="Include" />
+        <e p="Foo.cs" t="Include" />
+        <e p="JsonSerializer.cs" t="Include" />
+        <e p="Other.cs" t="Include" />
+        <e p="Program.cs" t="Include" />
+        <e p="TracerImpl.cs" t="Include" />
+        <e p="XmlSerializer.cs" t="Include" />
+      </e>
       <e p="packages" t="ExcludeRecursive" />
       <e p="TestProject" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />

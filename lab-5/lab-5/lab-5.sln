@@ -1,0 +1,12 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dependency Injection Library", "Dependency Injection Library\Dependency Injection Library.csproj", "{B2FBD7B2-B617-4B2F-93CE-C2018C5FAF99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dependency Injection Test Project", "Dependency Injection Test Project\Dependency Injection Test Project.csproj", "{D6F53A35-8FD8-485C-ADE4-E9F26E8F9C55}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+EndGlobal

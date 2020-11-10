@@ -17,4 +17,40 @@
       <ProjectReference Include="..\TestsClassGenerator\TestsClassGenerator.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Include="..\Output\ApplicationViewModel.cs">
+        <Link>Output\ApplicationViewModel.cs</Link>
+      </Compile>
+      <Compile Include="..\Output\asd.cs">
+        <Link>Output\asd.cs</Link>
+      </Compile>
+      <Compile Include="..\Output\AssemblyLib.cs">
+        <Link>Output\AssemblyLib.cs</Link>
+      </Compile>
+      <Compile Include="..\Output\Bar.cs">
+        <Link>Output\Bar.cs</Link>
+      </Compile>
+      <Compile Include="..\Output\Faker.cs">
+        <Link>Output\Faker.cs</Link>
+      </Compile>
+      <Compile Include="..\Output\Foo.cs">
+        <Link>Output\Foo.cs</Link>
+      </Compile>
+      <Compile Include="..\Output\JsonSerializer.cs">
+        <Link>Output\JsonSerializer.cs</Link>
+      </Compile>
+      <Compile Include="..\Output\Other.cs">
+        <Link>Output\Other.cs</Link>
+      </Compile>
+      <Compile Include="..\Output\Program.cs">
+        <Link>Output\Program.cs</Link>
+      </Compile>
+      <Compile Include="..\Output\TracerImpl.cs">
+        <Link>Output\TracerImpl.cs</Link>
+      </Compile>
+      <Compile Include="..\Output\XmlSerializer.cs">
+        <Link>Output\XmlSerializer.cs</Link>
+      </Compile>
+    </ItemGroup>
+
 </Project>
