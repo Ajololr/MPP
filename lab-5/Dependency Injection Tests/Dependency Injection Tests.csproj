@@ -4,6 +4,8 @@
         <TargetFramework>netcoreapp3.1</TargetFramework>
 
         <IsPackable>false</IsPackable>
+
+        <RootNamespace>TestProject1</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -14,7 +16,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\TestsClassGenerator\TestsClassGenerator.csproj" />
+      <ProjectReference Include="..\Dependency Injection Library\Dependency Injection Library.csproj" />
     </ItemGroup>
 
 </Project>

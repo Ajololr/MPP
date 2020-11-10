@@ -32,8 +32,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8fc83465-1e78-4f83-8b39-795b806b6e1e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.lab-4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lab-4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Input/test.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestProject/TestProject.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/TestProject.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab-5/lab-5/.idea/.idea.lab-5/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab-5/lab-5/.idea/.idea.lab-5/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab-5/lab-5/.idea/.idea.lab-5/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab-5/lab-5/.idea/.idea.lab-5/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab-5/lab-5/.idea/.idea.lab-5/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab-5/lab-5/.idea/.idea.lab-5/.idea/projectSettingsUpdater.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab-5/lab-5/.idea/.idea.lab-5/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab-5/lab-5/.idea/.idea.lab-5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab-5/lab-5/.idea/.idea.lab-5/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab-5/lab-5/Dependency Injection Library/Class1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab-5/lab-5/Dependency Injection Library/Dependency Injection Library.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab-5/lab-5/Dependency Injection Test Project/Dependency Injection Test Project.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab-5/lab-5/Dependency Injection Test Project/UnitTest1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab-5/lab-5/lab-5.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab-5/lab-5/lab-5.sln.DotSettings.user" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,6 +149,7 @@
       <workItem from="1603480859380" duration="691000" />
       <workItem from="1603741323957" duration="6128000" />
       <workItem from="1603908909414" duration="1072000" />
+      <workItem from="1605009957696" duration="33000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add basic pipeline">
       <created>1603031023765</created>
