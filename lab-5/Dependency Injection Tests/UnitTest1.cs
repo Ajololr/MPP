@@ -111,7 +111,7 @@ namespace TestProject1
         public void ResolveSingleton()
         {
             var dependencies = new DependenciesConfiguration();
-            dependencies.Register<IService, ServiceImpl1>(true);
+            dependencies.Register<IService, ServiceImpl1>(isSingleton: true);
             
             var provider = new DependencyProvider(dependencies);
             var service1 = provider.Resolve<IService>();
