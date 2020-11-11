@@ -28,24 +28,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ccf32ee7-416c-4f2e-aff6-47541281ce90" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Dependency Injection Tests/Dependency Injection Tests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab-4/.idea/.idea.lab-4/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab-4/.idea/.idea.lab-4/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab-4/.idea/.idea.lab-4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab-4/.idea/.idea.lab-4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab-4/Input/test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab-4/TestProject/TestProject.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../lab-4/TestProject/TestProject.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab-5/.idea/.idea.lab-5/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lab-5/.idea/.idea.lab-5/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab-5/.idea/.idea.lab-5/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab-5/.idea/.idea.lab-5/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab-5/.idea/.idea.lab-5/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab-5/.idea/.idea.lab-5/.idea/projectSettingsUpdater.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab-5/.idea/.idea.lab-5/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab-5/.idea/.idea.lab-5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lab-5/.idea/.idea.lab-5/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab-5/Dependency Injection Library/Class1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab-5/Dependency Injection Library/Dependency Injection Library.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab-5/Dependency Injection Test Project/Dependency Injection Test Project.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab-5/Dependency Injection Test Project/UnitTest1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab-5/lab-5.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab-5/lab-5.sln.DotSettings.user" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.lab-5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lab-5/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dependency Injection Library/Class1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dependency Injection Library/Class1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dependency Injection Tests/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dependency Injection Tests/UnitTest1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-5.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/lab-5.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,17 +42,42 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B831E75F-E2A0-431B-84A0-933948A5EE13/a6/d971dbff/TestFrameworkExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9CD23B5E-3B0C-4F80-A807-33BCFD1D82E1/2B0/RuntimeConstructorInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9CD23B5E-3B0C-4F80-A807-33BCFD1D82E1/30/RuntimeType.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/18D5A60D-361A-4AFD-A431-F772FA87FCC3/73/917e7901/TestAssemblyRunner`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/18D5A60D-361A-4AFD-A431-F772FA87FCC3/80/3a7b68ef/XunitTestAssemblyRunner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/18D5A60D-361A-4AFD-A431-F772FA87FCC3/ae/ff47ea08/ExecutionTimer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9CD23B5E-3B0C-4F80-A807-33BCFD1D82E1/25F/AsyncMethodBuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9CD23B5E-3B0C-4F80-A807-33BCFD1D82E1/2AC/MethodBase.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9CD23B5E-3B0C-4F80-A807-33BCFD1D82E1/13E/ThreadPool.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/18D5A60D-361A-4AFD-A431-F772FA87FCC3/2a/40fe8cf7/TestCollectionRunner`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9CD23B5E-3B0C-4F80-A807-33BCFD1D82E1/16B/Task.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/18D5A60D-361A-4AFD-A431-F772FA87FCC3/c3/524484d6/XunitTestCollectionRunner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/18D5A60D-361A-4AFD-A431-F772FA87FCC3/88/fea3d819/ReflectionAttributeInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9CD23B5E-3B0C-4F80-A807-33BCFD1D82E1/2AB/MemberInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/18D5A60D-361A-4AFD-A431-F772FA87FCC3/b2/877dc53e/TestClassRunner`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/18D5A60D-361A-4AFD-A431-F772FA87FCC3/68/f4f14d69/TestInvoker`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9CD23B5E-3B0C-4F80-A807-33BCFD1D82E1/14E/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9CD23B5E-3B0C-4F80-A807-33BCFD1D82E1/2B8/RuntimeParameterInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/18D5A60D-361A-4AFD-A431-F772FA87FCC3/ff/5813f5b9/XunitTestClassRunner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Dependency Injection Test Project/UnitTest1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Dependency Injection Tests/UnitTest1.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/18D5A60D-361A-4AFD-A431-F772FA87FCC3/68/f4f14d69/TestInvoker`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/18D5A60D-361A-4AFD-A431-F772FA87FCC3/96/8264e3f0/ReflectionAbstractionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/18D5A60D-361A-4AFD-A431-F772FA87FCC3/c4/90b7453a/ReflectionTypeInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9CD23B5E-3B0C-4F80-A807-33BCFD1D82E1/31/RuntimeType.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AD1BA1E0-77DE-4FA1-8AE2-65BB24DEC6A4/a4/c3c3373f/XUnitRunner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9CD23B5E-3B0C-4F80-A807-33BCFD1D82E1/2A2/CustomAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/52B82C28-59AD-42B4-A74A-A51A769C2E77/D/AnyAll.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9CD23B5E-3B0C-4F80-A807-33BCFD1D82E1/33/RuntimeHandles.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Dependency Injection Test Project/UnitTest1.cs" />
         <option value="$PROJECT_DIR$/TestProject1/UnitTest1.cs" />
-        <option value="$PROJECT_DIR$/Dependency Injection Library/Class1.cs" />
         <option value="$PROJECT_DIR$/Dependency Injection Tests/UnitTest1.cs" />
+        <option value="$PROJECT_DIR$/Dependency Injection Library/Class1.cs" />
       </list>
     </option>
   </component>
@@ -84,6 +95,7 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="SolutionBuilderGeneralOptionsPageId" />
   </component>
+  <component name="RunManager" selected="9f6dfe76-decf-4add-bb40-4a766ad9f8f8" />
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -94,7 +106,8 @@
       <updated>1605007140994</updated>
       <workItem from="1605007146200" duration="2574000" />
       <workItem from="1605009757103" duration="196000" />
-      <workItem from="1605009994589" duration="12762000" />
+      <workItem from="1605009994589" duration="13051000" />
+      <workItem from="1605084448087" duration="11913000" />
     </task>
     <task id="LOCAL-00001" summary="init: start lab 5">
       <created>1605007477660</created>
@@ -103,7 +116,21 @@
       <option name="project" value="LOCAL" />
       <updated>1605007477660</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: implement most features">
+      <created>1605028176222</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605028176222</updated>
+    </task>
+    <task id="LOCAL-00003" summary="refactor: move files to new directory">
+      <created>1605028305189</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1605028305189</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,97 +153,103 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="init: start lab 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="init: start lab 5" />
+    <MESSAGE value="feat: implement most features" />
+    <MESSAGE value="refactor: move files to new directory" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: move files to new directory" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605010373154">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1605010373154" />
-    <state width="490" height="464" key="DebuggerActiveHint" timestamp="1605027102835">
+    <state width="1000" height="568" key="DebuggerActiveHint" timestamp="1605095801611">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="490" height="464" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1605027102835" />
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1605027887786">
+    <state width="1000" height="568" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1605095801611" />
+    <state x="593" y="314" key="Github.CreateGistDialog" timestamp="1605085022459">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605027887786" />
-    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1605027887786">
+    <state x="593" y="314" key="Github.CreateGistDialog/0.0.1536.824@0.0.1536.824" timestamp="1605085022459" />
+    <state width="1493" height="288" key="GridCell.Tab.0.bottom" timestamp="1605096033499">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605027887786" />
-    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1605027887786">
+    <state width="1493" height="288" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605096033499" />
+    <state width="1493" height="288" key="GridCell.Tab.0.center" timestamp="1605096033499">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605027887786" />
-    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1605027887786">
+    <state width="1493" height="288" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605096033499" />
+    <state width="1493" height="288" key="GridCell.Tab.0.left" timestamp="1605096033499">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605027887786" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1605027887786">
+    <state width="1493" height="288" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605096033499" />
+    <state width="1493" height="288" key="GridCell.Tab.0.right" timestamp="1605096033499">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605027887786" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1605027887786">
+    <state width="1493" height="288" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605096033499" />
+    <state width="1493" height="288" key="GridCell.Tab.1.bottom" timestamp="1605096033500">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1605027887786" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1605027887786">
+    <state width="1493" height="288" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605096033500" />
+    <state width="1493" height="288" key="GridCell.Tab.1.center" timestamp="1605096033500">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1605027887786" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1605027887786">
+    <state width="1493" height="288" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1605096033500" />
+    <state width="1493" height="288" key="GridCell.Tab.1.left" timestamp="1605096033500">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1605027887786" />
-    <state width="1493" height="261" key="GridCell.Tab.2.bottom" timestamp="1605027887786">
+    <state width="1493" height="288" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1605096033500" />
+    <state width="1493" height="288" key="GridCell.Tab.1.right" timestamp="1605096033500">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605027887786" />
-    <state width="1493" height="261" key="GridCell.Tab.2.center" timestamp="1605027887786">
+    <state width="1493" height="288" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1605096033500" />
+    <state width="1493" height="288" key="GridCell.Tab.2.bottom" timestamp="1605096033500">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1605027887786" />
-    <state width="1493" height="261" key="GridCell.Tab.2.left" timestamp="1605027887786">
+    <state width="1493" height="288" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605096033500" />
+    <state width="1493" height="288" key="GridCell.Tab.2.center" timestamp="1605096033500">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1605027887786" />
-    <state width="1493" height="261" key="GridCell.Tab.2.right" timestamp="1605027887786">
+    <state width="1493" height="288" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1605096033500" />
+    <state width="1493" height="288" key="GridCell.Tab.2.left" timestamp="1605096033500">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1605027887786" />
-    <state width="1493" height="261" key="GridCell.Tab.3.bottom" timestamp="1605027887787">
+    <state width="1493" height="288" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1605096033500" />
+    <state width="1493" height="288" key="GridCell.Tab.2.right" timestamp="1605096033500">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605027887787" />
-    <state width="1493" height="261" key="GridCell.Tab.3.center" timestamp="1605027887787">
+    <state width="1493" height="288" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1605096033500" />
+    <state width="1493" height="288" key="GridCell.Tab.3.bottom" timestamp="1605096033500">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1605027887787" />
-    <state width="1493" height="261" key="GridCell.Tab.3.left" timestamp="1605027887787">
+    <state width="1493" height="288" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605096033500" />
+    <state width="1493" height="288" key="GridCell.Tab.3.center" timestamp="1605096033500">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1605027887787" />
-    <state width="1493" height="261" key="GridCell.Tab.3.right" timestamp="1605027887787">
+    <state width="1493" height="288" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1605096033500" />
+    <state width="1493" height="288" key="GridCell.Tab.3.left" timestamp="1605096033500">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1605027887787" />
-    <state width="1493" height="261" key="GridCell.Tab.4.bottom" timestamp="1605027887787">
+    <state width="1493" height="288" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1605096033500" />
+    <state width="1493" height="288" key="GridCell.Tab.3.right" timestamp="1605096033500">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.4.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605027887787" />
-    <state width="1493" height="261" key="GridCell.Tab.4.center" timestamp="1605027887787">
+    <state width="1493" height="288" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1605096033500" />
+    <state width="1493" height="288" key="GridCell.Tab.4.bottom" timestamp="1605096033500">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.4.center/0.0.1536.824@0.0.1536.824" timestamp="1605027887787" />
-    <state width="1493" height="261" key="GridCell.Tab.4.left" timestamp="1605027887787">
+    <state width="1493" height="288" key="GridCell.Tab.4.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605096033500" />
+    <state width="1493" height="288" key="GridCell.Tab.4.center" timestamp="1605096033500">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.4.left/0.0.1536.824@0.0.1536.824" timestamp="1605027887787" />
-    <state width="1493" height="261" key="GridCell.Tab.4.right" timestamp="1605027887787">
+    <state width="1493" height="288" key="GridCell.Tab.4.center/0.0.1536.824@0.0.1536.824" timestamp="1605096033500" />
+    <state width="1493" height="288" key="GridCell.Tab.4.left" timestamp="1605096033500">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.4.right/0.0.1536.824@0.0.1536.824" timestamp="1605027887787" />
+    <state width="1493" height="288" key="GridCell.Tab.4.left/0.0.1536.824@0.0.1536.824" timestamp="1605096033500" />
+    <state width="1493" height="288" key="GridCell.Tab.4.right" timestamp="1605096033500">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="288" key="GridCell.Tab.4.right/0.0.1536.824@0.0.1536.824" timestamp="1605096033500" />
     <state x="361" y="144" key="Rider.ProjectTemplateDialog.Size" timestamp="1605010001324">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -225,10 +258,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1605007341677" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1605007480452">
+    <state x="93" y="93" width="1350" height="638" key="VCS.FileHistoryDialog" timestamp="1605088979387">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605007480452" />
+    <state x="93" y="93" width="1350" height="638" key="VCS.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1605088979387" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1605028307101">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605028307101" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1605091315078">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1605091315078" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605020902679">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -238,32 +279,38 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Dependency Injection Library/Class1.cs</url>
-          <line>86</line>
-          <properties documentPath="E:\University\СПП\lab-5\Dependency Injection Library\Class1.cs" initialLine="86">
+          <url>file://$PROJECT_DIR$/Dependency Injection Tests/UnitTest1.cs</url>
+          <line>149</line>
+          <properties documentPath="E:\University\СПП\lab-5\Dependency Injection Tests\UnitTest1.cs" initialLine="149">
             <startOffsets>
-              <option value="2576" />
+              <option value="4222" />
             </startOffsets>
             <endOffsets>
-              <option value="2603" />
+              <option value="4269" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="16" />
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Dependency Injection Tests/UnitTest1.cs</url>
-          <line>112</line>
-          <properties documentPath="E:\University\СПП\lab-5\Dependency Injection Tests\UnitTest1.cs" initialLine="112">
+          <url>file://$PROJECT_DIR$/Dependency Injection Library/Class1.cs</url>
+          <line>132</line>
+          <properties documentPath="E:\University\СПП\lab-5\Dependency Injection Library\Class1.cs" initialLine="132">
             <startOffsets>
-              <option value="3201" />
+              <option value="4576" />
             </startOffsets>
             <endOffsets>
-              <option value="3254" />
+              <option value="4639" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="17" />
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Frame#TestProject1.DependencyProviderClass.ResolveEnumerable" memberName="services" />
+        <PinnedItemInfo parentTag="Frame#Dependency_Injection_Library.DependencyProvider.Resolve" memberName="DefaultBinder" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

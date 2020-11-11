@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Dependency_Injection_Library;
 using Xunit;
@@ -29,12 +30,31 @@ namespace TestProject1
         {
         }
     }
-    
+
     interface IRepository{}
     
     class RepositoryImpl : IRepository
     {
         public RepositoryImpl(){} // может иметь свои зависимости, опустим для простоты
+    }
+    
+    interface IService<TRepository> where TRepository : IRepository
+    {
+    }
+
+    class ServiceImpl<TRepository> : IService<TRepository> 
+        where TRepository : IRepository
+    {
+        public TRepository Repository;
+        public ServiceImpl(TRepository repository)
+        {
+            Repository = repository;
+        }
+    }
+
+    class MySqlRepository : IRepository
+    {
+        
     }
 
     public class DependenciesConfigurationClass
@@ -111,6 +131,32 @@ namespace TestProject1
             var services = provider.Resolve<IEnumerable<IService>>();
         
             Assert.Equal(2, (services as List<object>)?.Count);    
+        }
+        
+        [Fact]
+        public void ResolveGenericDependency()
+        {
+            var dependencies = new DependenciesConfiguration();
+            dependencies.Register<IRepository, MySqlRepository>();
+            dependencies.Register<IService<IRepository>, ServiceImpl<IRepository>>();
+            
+            var provider = new DependencyProvider(dependencies);
+            var service = provider.Resolve<IService<IRepository>>();
+        
+            Assert.NotNull((service as ServiceImpl<IRepository>)?.Repository);    
+        }
+        
+        [Fact]
+        public void ResolveOpenGenericsDependency()
+        {
+            var dependencies = new DependenciesConfiguration();
+            dependencies.Register<IRepository, MySqlRepository>();
+            dependencies.Register(typeof(IService<>), typeof(ServiceImpl<>));
+            
+            var provider = new DependencyProvider(dependencies);
+            var service = provider.Resolve<IService<IRepository>>();
+        
+            Assert.NotNull((service as ServiceImpl<IRepository>)?.Repository);    
         }
     }
 }
