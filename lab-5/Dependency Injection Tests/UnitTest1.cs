@@ -1,12 +1,15 @@
 using System;
 using System.Collections.Generic;
 using Dependency_Injection_Library;
-using Xunit;
-using Xunit.Sdk;
+using NUnit.Framework;
 
 namespace TestProject1
 {
     interface IService {}
+
+    interface IOtherService
+    {
+    }
 
     class ServiceImpl1 : IService
     {
@@ -14,6 +17,13 @@ namespace TestProject1
 
     class ServiceImpl2 : IService
     {
+    };
+    
+    class NoConstructorImpl : IService
+    {
+        private NoConstructorImpl()
+        {
+        }
     };
     
     abstract class AbstractService : IService
@@ -57,30 +67,32 @@ namespace TestProject1
         
     }
 
+    [TestFixture]
     public class DependenciesConfigurationClass
     {
-        [Fact]
+        [Test]
         public void Count()
         {
             var dependencies = new DependenciesConfiguration();
             dependencies.Register<IService, ServiceImpl1>();
             dependencies.Register<AbstractService, Service2>();
-            Assert.Equal(2, dependencies.Count());
+            Assert.AreEqual(2, dependencies.Count());
         }
 
-        [Fact]
+        [Test]
         public void AsSelf()
         {
             var dependencies = new DependenciesConfiguration();
             dependencies.Register<ServiceImpl1, ServiceImpl1>();
             
-            Assert.Equal(1, dependencies.Count());
+            Assert.AreEqual(1, dependencies.Count());
         }
     }
 
+    [TestFixture]
     public class DependencyProviderClass
     {
-        [Fact]
+        [Test]
         public void ResolveBasic()
         {
             var dependencies = new DependenciesConfiguration();
@@ -90,10 +102,34 @@ namespace TestProject1
             var provider = new DependencyProvider(dependencies);
             var service1 = provider.Resolve<IService>();
 
-            Assert.Equal( typeof(ServiceImpl1), service1.GetType());
+            Assert.AreEqual( typeof(ServiceImpl1), service1.GetType());
         }
         
-        [Fact]
+        [Test]
+        public void NoImplementationError()
+        {
+            var dependencies = new DependenciesConfiguration();
+            dependencies.Register<IService, ServiceImpl1>();
+            dependencies.Register<AbstractService, Service2>();
+            
+            var provider = new DependencyProvider(dependencies);
+
+            Assert.Throws(typeof(Exception), () => provider.Resolve<IOtherService>());
+        }
+        
+        [Test]
+        public void NoConstructorError()
+        {
+            var dependencies = new DependenciesConfiguration();
+            dependencies.Register<IService, NoConstructorImpl>();
+            
+            var provider = new DependencyProvider(dependencies);
+
+            Assert.Throws(typeof(Exception), () => provider.Resolve<IService>());
+        }
+
+        
+        [Test]
         public void ResolveRecursive()
         {
             var dependencies = new DependenciesConfiguration();
@@ -103,11 +139,11 @@ namespace TestProject1
             var provider = new DependencyProvider(dependencies);
             var service = provider.Resolve<IService>();
 
-            Assert.Equal( typeof(ServiceImpl), service.GetType());
+            Assert.AreEqual( typeof(ServiceImpl), service.GetType());
         }
         
         
-        [Fact]
+        [Test]
         public void ResolveSingleton()
         {
             var dependencies = new DependenciesConfiguration();
@@ -117,10 +153,10 @@ namespace TestProject1
             var service1 = provider.Resolve<IService>();
             var service2 = provider.Resolve<IService>();
 
-            Assert.Same( service1, service2);
+            Assert.AreSame( service1, service2);
         }
         
-        [Fact]
+        [Test]
         public void ResolveEnumerable()
         {
             var dependencies = new DependenciesConfiguration();
@@ -130,10 +166,10 @@ namespace TestProject1
             var provider = new DependencyProvider(dependencies);
             var services = provider.Resolve<IEnumerable<IService>>();
         
-            Assert.Equal(2, (services as List<object>)?.Count);    
+            Assert.AreEqual(2, (services as List<object>)?.Count);    
         }
         
-        [Fact]
+        [Test]
         public void ResolveGenericDependency()
         {
             var dependencies = new DependenciesConfiguration();
@@ -146,7 +182,7 @@ namespace TestProject1
             Assert.NotNull((service as ServiceImpl<IRepository>)?.Repository);    
         }
         
-        [Fact]
+        [Test]
         public void ResolveOpenGenericsDependency()
         {
             var dependencies = new DependenciesConfiguration();

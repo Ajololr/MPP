@@ -28,7 +28,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ccf32ee7-416c-4f2e-aff6-47541281ce90" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.lab-5/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lab-5/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.lab-5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lab-5/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dependency Injection Library/Class1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dependency Injection Library/Class1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dependency Injection Library/Dependency Injection Library.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Dependency Injection Library/Dependency Injection Library.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dependency Injection Tests/Dependency Injection Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Dependency Injection Tests/Dependency Injection Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dependency Injection Tests/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dependency Injection Tests/UnitTest1.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,9 +95,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="SolutionBuilderGeneralOptionsPageId" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="9f6dfe76-decf-4add-bb40-4a766ad9f8f8" />
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -106,6 +110,8 @@
       <workItem from="1605009994589" duration="13051000" />
       <workItem from="1605084448087" duration="12643000" />
       <workItem from="1605117404676" duration="1967000" />
+      <workItem from="1606488003817" duration="5455000" />
+      <workItem from="1607596062366" duration="2172000" />
     </task>
     <task id="LOCAL-00001" summary="init: start lab 5">
       <created>1605007477660</created>
@@ -149,15 +155,46 @@
     <option name="version" value="3" />
   </component>
   <component name="UnitTestsCoverage.Settings">
-    <option name="coveragePercentColumnWidth" value="105" />
+    <option name="coveragePercentColumnWidth" value="100" />
     <option name="sortOrder" value="ASCENDING" />
-    <option name="sortedColumn" value="2" />
-    <option name="symbolColumnWidth" value="55" />
+    <option name="symbolColumnWidth" value="389" />
     <coverage-tree-state>
       <expand>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 91% 17/186" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 91% 19/204" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 91% 19/204" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Dependency Injection Library 86% 16/117" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 91% 19/204" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Dependency Injection Library 86% 16/117" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Dependency_Injection_Library 86% 16/117" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 91% 19/204" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Dependency Injection Library 86% 16/117" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Dependency_Injection_Library 86% 16/117" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="DependenciesConfiguration 71% 11/38" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 91% 19/204" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Dependency Injection Library 86% 16/117" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Dependency_Injection_Library 86% 16/117" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="DependencyProvider 93% 5/68" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 91% 19/204" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Dependency Injection Library 86% 16/117" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Dependency_Injection_Library 86% 16/117" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="ImplementationInfo 100% 0/11" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
       </expand>
       <select />
@@ -283,10 +320,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="144" key="Rider.ProjectTemplateDialog.Size/0.0.1536.824@0.0.1536.824" timestamp="1605010001324" />
-    <state x="277" y="57" key="SettingsEditor" timestamp="1605007341677">
+    <state x="277" y="57" key="SettingsEditor" timestamp="1606490006677">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1605007341677" />
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1606490006677" />
     <state x="93" y="93" width="1350" height="638" key="VCS.FileHistoryDialog" timestamp="1605088979387">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -295,14 +332,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605119299558" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1605091315078">
+    <state x="425" y="187" key="run.anything.popup" timestamp="1606490845479">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1605091315078" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605020902679">
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1606490845479" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1606492339056">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1605020902679" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1606492339056" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

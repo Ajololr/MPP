@@ -3,9 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using NLog;
+using NLog.Config;
+using NLog.Targets;
+
 
 namespace Dependency_Injection_Library
 {
+    
     public class ImplementationInfo
     {
         public Type Type;
@@ -31,6 +36,17 @@ namespace Dependency_Injection_Library
     
     public class DependenciesConfiguration
     {
+        public readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
+        public DependenciesConfiguration()
+        {
+            LoggingConfiguration config = new NLog.Config.LoggingConfiguration();
+            FileTarget logfile = new NLog.Targets.FileTarget("logfile") { FileName = "debugOutput.txt" };
+            ConsoleTarget logconsole = new NLog.Targets.ConsoleTarget("logconsole");
+            config.AddRule(LogLevel.Debug, LogLevel.Fatal, logconsole);
+            config.AddRule(LogLevel.Debug, LogLevel.Fatal, logfile);
+            NLog.LogManager.Configuration = config;
+        }
+
         private Dictionary<Type, List<ImplementationInfo> > _dependencies = new Dictionary<Type, List<ImplementationInfo>>();
 
         public void Register(Type dependency, Type implementation, bool isSingleton = false)
@@ -48,7 +64,9 @@ namespace Dependency_Injection_Library
             { 
                 _dependencies[typeof(TDependency)] = new List<ImplementationInfo>();
             }
-            _dependencies[typeof(TDependency)].Add(new ImplementationInfo(typeof(TImplementation), isSingleton));
+            _dependencies[typeof(TDependency)].Add(new ImplementationInfo(typeof(TImplementation), isSingleton));            
+            Logger.Debug("Add dependency {0} with implementation {1} (singleton: {2})",typeof(TDependency), typeof(TImplementation), isSingleton);
+
         }
 
         public int Count()
@@ -111,7 +129,7 @@ namespace Dependency_Injection_Library
                     return ResolveOpenGeneric(_configuration.GetFirstImplementationType(genericBase).Type, genericArgument) as TDependency;
                 }
             }
-            
+            _configuration.Logger.Error("Error resolving {0}",typeof(TDependency));
             throw new Exception("Not supported type");
         }
 
@@ -119,36 +137,21 @@ namespace Dependency_Injection_Library
         {
             ConstructorInfo[] constructors = type.GetConstructors();
 
-            foreach (var constructorInfo in constructors)
-            {
+            foreach (var constructorInfo in constructors) {
                 ParameterInfo[] parameters = constructorInfo.GetParameters();
-                bool isSuitable = parameters.All(info => _configuration.Has(info.ParameterType) || typeof(IEnumerable).IsAssignableFrom(info.ParameterType));
+                bool isSuitable = parameters.All(info => _configuration.Has(info.ParameterType));
 
                 if (isSuitable)
                 {
                     Object value = constructorInfo.Invoke(parameters.Select(info =>
                     {
-                        if (typeof(IEnumerable).IsAssignableFrom(info.ParameterType))
-                        {
-                            Type genericType = info.ParameterType.GetGenericArguments()[0];
-                            ArrayList arrayList = new ArrayList();
-                            foreach (var implementationType in _configuration.GetAllImplementationTypes(genericType))
-                            {    
-                                arrayList.Add(Resolve(implementationType));
-                            }
-
-                            ConstructorInfo[] constructorInfo =
-                                typeof(List<>).MakeGenericType(genericType).GetConstructors();
-                            Object list = constructorInfo[2].Invoke(new Object[] {arrayList as Object});
-
-                            return list;
-                        }
                         return Resolve(_configuration.GetFirstImplementationType(info.ParameterType));
                     }).ToArray());
+                    _configuration.Logger.Error("Creating instance of {0}",type);
                     return value;
                 }
             }
-            
+            _configuration.Logger.Error("No suitable constructor for {0}",type);
             throw new Exception("No suitable constructor");
         }
 

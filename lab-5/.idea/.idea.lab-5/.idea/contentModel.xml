@@ -16,6 +16,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Class1.cs" t="Include" />
         <e p="Dependency Injection Library.csproj" t="IncludeRecursive" />
+        <e p="Dependency Injection Library.csproj.DotSettings" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">

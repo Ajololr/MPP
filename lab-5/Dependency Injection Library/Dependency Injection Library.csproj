@@ -5,4 +5,9 @@
         <RootNamespace>Dependency_Injection_Library</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="NLog" Version="4.7.5" />
+      <PackageReference Include="NUnit" Version="3.12.0" />
+    </ItemGroup>
+
 </Project>
